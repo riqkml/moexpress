@@ -10,7 +10,7 @@ const db = require('./app/models')
 
 db.mongoose
     .connect(db.url, {
-        useNewUrlParser: true
+        useNewUrlParser: true,
     }).then((res) => {
         console.log('connected success')
     }).catch(err => {
@@ -18,5 +18,6 @@ db.mongoose
         process.exit()
     })
 
+require('./app/routes/post.routes')(app)
 const PORT = 8000
 app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`))
