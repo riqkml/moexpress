@@ -12,7 +12,7 @@ db.mongoose
     .connect(db.url, {
         useNewUrlParser: true
     }).then((res) => {
-        console.log('connected')
+        console.log('connected success')
     }).catch(err => {
         console.log('failed', err.message)
         process.exit()
